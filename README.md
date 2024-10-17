@@ -4,12 +4,19 @@ If you need specific security settings, rename the `.env.example` file to `.env`
 
 ## Setup Instructions
 
+### Start grafana only
+
+```bash
+docker compose up -d
+```
+
 ### InfluxDB Initialization
 
 1. Run the following command to initialize InfluxDB:
 
     ```bash
-    docker compose up influxdb_cli
+
+    docker compose -f docker-compose-full.yml up influxdb_cli
     ```
 
     Press `Ctrl + C` after the database initialization (wait 10-15 seconds).
@@ -17,13 +24,13 @@ If you need specific security settings, rename the `.env.example` file to `.env`
 2. Start the services:
 
     ```bash
-    docker compose up -d
+    docker compose -f docker-compose-full.yml up -d
     ```
 
-### Start grafana only
+3. Stop the services:
 
     ```bash
-    docker compose up -d grafana
+    docker compose down
     ```
 
 ### Services
