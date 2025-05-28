@@ -62,6 +62,7 @@ services:
       - influxdb
     volumes:
       - ./telegraf/:/etc/telegraf/
+      - /usr/share/snmp/mibs/:./usr/share/snmp/mibs/
     networks:
       - lab240-monitoring
     environment: 
