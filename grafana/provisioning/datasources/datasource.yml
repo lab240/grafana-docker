@@ -1,0 +1,26 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB-lab
+    type: influxdb
+    access: proxy
+    orgId: 1
+    uid: P39F8580EFE73AB7B
+    url: http://mon_influxdb2:8086
+    password:
+    user:
+    database:
+    basicAuth: false
+    basicAuthUser:
+    basicAuthPassword:
+    withCredentials:
+    isDefault: true
+    secureJsonData:
+      token: IvuRlZ6ZJR8f6vzzK54ywtEB_xvFuXS6DrGql4bTABEkgum8BhHBZ4T10XNEdhB5PeoB5WZpXglQWv9LaEisvQ==
+    jsonData:
+      version: Flux
+      httpMode: "POST"
+      organization: lab240
+      defaultBucket: bucket
+    version: 1
+    editable: true
