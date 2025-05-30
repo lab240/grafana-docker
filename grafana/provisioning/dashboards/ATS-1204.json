@@ -30,7 +30,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -101,7 +101,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Volt_input1\" or r[\"_field\"] == \"Volt_input2\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
           "refId": "A"
@@ -113,7 +113,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -186,7 +186,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Freq_input1\" or r[\"_field\"] == \"Freq_input2\")\r\n  |> toFloat()\r\n  |> map(fn: (r) => ({ r with _value: r._value * 0.01 }))\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
           "refId": "A"
@@ -198,7 +198,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -249,7 +249,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Full-Power\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -261,7 +261,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -320,7 +320,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Amp-output\")\r\n  |> toFloat()\r\n  |> map(fn: (r) => ({ r with _value: r._value * 0.01}))\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -332,7 +332,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -442,7 +442,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Freq_input1\" or r[\"_field\"] == \"Freq_input2\")\r\n  |> toFloat()\r\n  |> map(fn: (r) => ({ r with _value: r._value * 0.01 }))\r\n  |> aggregateWindow(every: v.windowPeriod, fn: last, createEmpty: false)\r\n  |> yield(name: \"last\")",
           "refId": "A"
@@ -454,7 +454,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -539,7 +539,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Volt_input1\" or r[\"_field\"] == \"Volt_input2\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -551,7 +551,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -635,7 +635,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Full-Power\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -647,7 +647,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -731,7 +731,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Amp-output\")\r\n  |> toFloat()\r\n  |> map(fn: (r) => ({ r with _value: r._value * 0.01}))\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -743,7 +743,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -827,7 +827,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Reactive-Power\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -839,7 +839,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "description": "",
       "fieldConfig": {
@@ -924,7 +924,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Cos-ph\")\r\n  |> toFloat()\r\n  |> map(fn: (r) => ({ r with _value: r._value * 0.001}))\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -936,7 +936,7 @@
     {
       "datasource": {
         "type": "influxdb",
-        "uid": "fen9dir8cml1ce"
+        "uid": "P39F8580EFE73AB7B"
       },
       "fieldConfig": {
         "defaults": {
@@ -1015,7 +1015,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "fen9dir8cml1ce"
+            "uid": "P39F8580EFE73AB7B"
           },
           "query": "from(bucket: \"${buckets}\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"${measurements}\")\r\n  |> filter(fn: (r) => r[\"host\"] == \"${host}\")\r\n  |> filter(fn: (r) => r[\"name\"] == \"${device}\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"Active-Power\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
           "refId": "A"
@@ -1038,7 +1038,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "fen9dir8cml1ce"
+          "uid": "P39F8580EFE73AB7B"
         },
         "definition": "buckets()",
         "hide": 2,
@@ -1057,7 +1057,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "fen9dir8cml1ce"
+          "uid": "P39F8580EFE73AB7B"
         },
         "definition": "import \"influxdata/influxdb/schema\"\r\n\r\nschema.measurements(bucket: \"${buckets}\")",
         "includeAll": false,
@@ -1075,7 +1075,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "fen9dir8cml1ce"
+          "uid": "P39F8580EFE73AB7B"
         },
         "definition": "import \"influxdata/influxdb/schema\"\r\n\r\nschema.measurementTagValues(\r\n    bucket: \"${buckets}\",\r\n    tag: \"host\",\r\n    measurement: \"${measurements}\",\r\n)",
         "includeAll": false,
@@ -1093,7 +1093,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "fen9dir8cml1ce"
+          "uid": "P39F8580EFE73AB7B"
         },
         "definition": "import \"influxdata/influxdb/schema\"\r\n\r\nschema.measurementTagValues(\r\n    bucket: \"${buckets}\",\r\n    tag: \"name\",\r\n    measurement: \"${measurements}\",\r\n)",
         "includeAll": false,
