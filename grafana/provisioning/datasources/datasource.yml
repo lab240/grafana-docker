@@ -1,12 +1,12 @@
 apiVersion: 1
 
 datasources:
-  - name: InfluxDB-lab
+  - name: InfluxDB
     type: influxdb
     access: proxy
     orgId: 1
     uid: P39F8580EFE73AB7B
-    url: http://mon_influxdb2:8086
+    url: http://lab_influxdb2:8086
     password:
     user:
     database:

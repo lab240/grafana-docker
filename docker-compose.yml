@@ -6,6 +6,7 @@ services:
     restart: always
     volumes:
       - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
     ports:
       - "3000:3000"
     depends_on:
@@ -61,8 +62,8 @@ services:
     links:
       - influxdb
     volumes:
-      - ./telegraf/:/etc/telegraf/
-      - /usr/share/snmp/mibs/:/usr/share/snmp/mibs/
+      - ./telegraf/telegraf-conf/:/etc/telegraf/
+      - ./telegraf/mibs/:/usr/share/snmp/mibs/
     networks:
       - lab240-monitoring
     environment: 
